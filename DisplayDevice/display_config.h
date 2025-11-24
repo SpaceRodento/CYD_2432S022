@@ -1,7 +1,7 @@
 /*=====================================================================
   display_config.h - ESP32-2432S022 TFT Display Configuration
 
-  LovyanGFX configuration for 2.4" ST7789 TFT (240x320)
+  LovyanGFX configuration for 2.2" ST7789 TFT (240x320)
   with 8-bit parallel interface (MCU8080)
 
   Hardware: ESP32-2432S022

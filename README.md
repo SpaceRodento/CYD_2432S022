@@ -1,10 +1,12 @@
 # Universal TFT Display Station - CYD_2432S022
 
-CYD variant for those who just happened to order whatever yellow display they found in Aliexpress. Definitely not me though.
+**2.2" Cheap Yellow Display (CYD) variant - ESP32-2432S022**
 
-**UART-based TFT display for ESP32-2432S022** (Landscape mode)
+A general-purpose UART display station that shows labeled data rows on a TFT screen. Send any key-value pairs from another ESP32 and they appear on the display - perfect for sensor readouts, system monitoring, or debugging.
 
-Simple, flexible, and easy to integrate into any ESP32 project!
+Works with the ESP32-2432S022 board (2.2" ST7789 TFT with ESP32-WROOM-32).
+
+Simple 2-wire connection, easy API, ready-to-use examples.
 
 ---
 
@@ -27,7 +29,7 @@ Simple, flexible, and easy to integrate into any ESP32 project!
 
 **Display Device (ESP32-2432S022):**
 - ESP32-WROOM-32
-- 2.4" ST7789 TFT (240x320 pixels)
+- 2.2" ST7789 TFT (240x320 pixels)
 - 8-bit parallel interface
 - Integrated - no wiring needed!
 
@@ -64,7 +66,7 @@ Simple, flexible, and easy to integrate into any ESP32 project!
 
 ```bash
 # Arduino IDE
-File → Open → TFT_Display_UART/DisplayDevice/DisplayDevice.ino
+File → Open → CYD_2432S022/DisplayDevice/DisplayDevice.ino
 Tools → Board → ESP32 Dev Module
 Tools → Port → (select your ESP32-2432S022)
 Tools → Upload
@@ -398,7 +400,7 @@ RGB565 color codes:
 | Component | Details |
 |-----------|---------|
 | MCU | ESP32-WROOM-32 |
-| Display | ST7789 2.4" 240x320 |
+| Display | ST7789 2.2" 240x320 |
 | Interface | 8-bit Parallel (MCU8080) |
 | Touch | CST820 (I2C) - not used |
 | UART | RX=GPIO3, TX=GPIO1 |
@@ -444,7 +446,10 @@ RGB565 color codes:
 ## 💾 File Structure
 
 ```
-TFT_Display_UART/
+CYD_2432S022/
+├── README.md                   # This file
+├── LICENSE                     # MIT License
+│
 ├── DisplayDevice/              # Display side code
 │   ├── DisplayDevice.ino       # Main display program
 │   └── display_config.h        # TFT configuration
@@ -452,18 +457,10 @@ TFT_Display_UART/
 ├── SenderLibrary/              # Sender side library
 │   └── DisplayClient.h         # Library for sender
 │
-├── examples/                   # Example projects
-│   ├── 01_Basic/               # Simple counter + uptime
-│   │   ├── Basic.ino
-│   │   └── DisplayClient.h
-│   ├── 02_Sensors/             # Sensor data display
-│   │   ├── Sensors.ino
-│   │   └── DisplayClient.h
-│   └── 03_Advanced/            # Advanced features
-│       ├── Advanced.ino
-│       └── DisplayClient.h
-│
-└── README.md                   # This file
+└── examples/                   # Example projects
+    ├── 01_Basic/               # Simple counter + uptime
+    ├── 02_Sensors/             # Sensor data display
+    └── 03_Advanced/            # System metrics, alerts
 ```
 
 ---

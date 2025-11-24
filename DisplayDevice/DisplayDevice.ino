@@ -8,7 +8,7 @@
 
   Hardware:
   - ESP32-WROOM-32
-  - 2.4" ST7789 TFT (240x320 → landscape 320x240)
+  - 2.2" ST7789 TFT (240x320 → landscape 320x240)
   - 8-bit parallel interface
 
   POWER SUPPLY:
