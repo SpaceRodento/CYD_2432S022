@@ -4,6 +4,8 @@
 
 A general-purpose UART display station that shows labeled data rows on a TFT screen. Send any key-value pairs from another ESP32 and they appear on the display - perfect for sensor readouts, system monitoring, or debugging.
 
+Created with major help from Claude AI code.
+
 Works with the ESP32-2432S022 board (2.2" ST7789 TFT with ESP32-WROOM-32).
 
 Simple 2-wire connection, easy API, ready-to-use examples.
